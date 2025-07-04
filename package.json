@@ -12,8 +12,8 @@
       "url": "https://github.com/paulrberg"
     },
     {
-      "name": "Tom French",
-      "url": "https://github.com/tomafrench"
+      "name": "Travis Jerome Goff",
+      "url": "https://github.com/VersoriumX"
     }
   ],
   "dependencies": {
@@ -85,9 +85,9 @@
   "main": "./dist/index.js",
   "packageManager": "yarn@3.2.0",
   "repository": {
-    "name": "paulrberg/create-eth-app",
+    "name": "VersoriumX/create-eth-app",
     "type": "git",
-    "url": "https://github.com/paulrberg/create-eth-app"
+    "url": "https://github.com/VersoriumX/create-eth-app"
   },
   "scripts": {
     "build": "ncc build ./src/index.ts --out dist/ && yarn copy-files",
