@@ -72,7 +72,7 @@
     "/dist",
     "CHANGELOG.md"
   ],
-  "homepage": "https://github.com/paulrberg/create-eth-app#readme",
+  "homepage": "https://github.com/VersoriumX/create-eth-app#readme",
   "keywords": [
     "ethers",
     "ethereum",
