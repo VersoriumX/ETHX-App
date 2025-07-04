@@ -1,15 +1,15 @@
 {
-  "name": "create-eth-app",
+  "name": "VersoriumX-App",
   "description": "Create Ethereum-powered apps with one command",
   "version": "1.8.3",
   "bin": "./dist/index.js",
   "bugs": {
-    "url": "https://github.com/paulrberg/create-eth-app/issues"
+    "url": "https://github.com/VersoriumX/create-eth-app/issues"
   },
   "contributors": [
     {
-      "name": "Paul Razvan Berg",
-      "url": "https://github.com/paulrberg"
+      "name": "Javaweh",
+      "url": "https://github.com/VersoriumX"
     },
     {
       "name": "Travis Jerome Goff",
