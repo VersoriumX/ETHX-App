@@ -1,0 +1,41 @@
+name: "Deploy to GitHub Pages"
+
+on:
+  push:
+    branches:
+      - "develop"
+
+jobs:
+  deploy:
+    permissions:
+      contents: write
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Check out the repo"
+        uses: "actions/checkout@v3"
+
+      - name: "Install Node.js"
+        uses: "actions/setup-node@v3"
+        with:
+          cache: "yarn"
+          node-version: "16"
+
+      - name: "Install dependencies"
+        run: "yarn install --immutable"
+
+      - name: "Build"
+        run: "yarn build"
+
+      - name: "Prepare Pages"
+        run: |
+          mkdir -p public
+          cp README.md public/index.md
+          # If we had a static site generator, we would run it here.
+          # For now, we just copy the README and a simple HTML.
+          echo "<html><body><h1>Create Eth App</h1><p>Documentation coming soon. See <a href='https://github.com/VersoriumX/ETHX-App'>GitHub</a> for now.</p></body></html>" > public/index.html
+
+      - name: "Deploy to GitHub Pages"
+        uses: "JamesIves/github-pages-deploy-action@v4"
+        with:
+          folder: "public"
+          branch: "gh-pages"
