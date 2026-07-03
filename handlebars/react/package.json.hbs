@@ -17,6 +17,9 @@
     "{{ this }}": "{{{lookup ../values @index }}}",
     {{/each }}
     {{/with }}
+    "contracts:build": "yarn workspace {{ orgName }}/contracts forge:build",
+    "contracts:test": "yarn workspace {{ orgName }}/contracts forge:test",
+    "contracts:deploy": "yarn workspace {{ orgName }}/contracts forge:deploy",
     "react-app:build": "yarn workspace {{ orgName }}/react-app build",
     "react-app:eject": "yarn workspace {{ orgName }}/react-app eject",
     "react-app:ipfs": "yarn workspace {{ orgName }}/react-app ipfs",
