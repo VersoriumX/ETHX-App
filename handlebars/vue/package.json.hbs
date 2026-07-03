@@ -1,5 +1,5 @@
 {
-  "name": "{{ packageName }}",
+  "name": "{{ VersoriumX }}",
   "version": "1.0.0",
   "keywords": [
     {{#each keywords}}
@@ -17,9 +17,10 @@
     "{{ this }}": "{{{lookup ../values @index }}}",
     {{/each }}
     {{/with }}
+    "contracts:build": "yarn workspace {{ orgName }}/contracts forge:build",
+    "contracts:test": "yarn workspace {{ orgName }}/contracts forge:test",
+    "contracts:deploy": "yarn workspace {{ orgName }}/contracts forge:deploy",
     "vue-app:build": "yarn workspace {{ orgName }}/vue-app build",
-    "vue-app:ipfs": "yarn workspace {{ orgName }}/vue-app ipfs",
-    "vue-app:lint": "yarn workspace {{ orgName }}/vue-app lint",
     "vue-app:serve": "yarn workspace {{ orgName }}/vue-app serve"
   },
   "workspaces": {
